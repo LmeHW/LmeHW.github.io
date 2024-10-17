@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>CS181 Artificial Intelligence</title>
+    <link href="/2024/10/11/CS181-Artificial-Intelligence/"/>
+    <url>/2024/10/11/CS181-Artificial-Intelligence/</url>
+    
+    <content type="html"><![CDATA[<h1>1. Search</h1><p>A search problem consists of:</p><ol><li>A state space</li><li>A successor function(with actions, costs)</li><li>A start state and a goal test</li></ol><p>A <b style="color: red;">search space</b> keeps only the details needed for planning (abstraction).<br><img src="/img/CS181/state-space.png" alt=""></p><h2 id="DFS">DFS</h2><p><img src="/img/CS181/DFS.png" alt=""></p><h2 id="BFS">BFS</h2><p><img src="/img/CS181/BFS.png" alt=""></p><h2 id="UCS">UCS</h2><p>Uniform Cost Search is <span class="label label-success">complete and optimal</span>.</p><p><img src="/img/CS181/UCS.png" alt=""></p><div class="note note-warning">            <ol><li>Explores options in every “direction”</li><li>No information about goal location</li></ol>          </div><h2 id="Greedy">Greedy</h2><p>Expand a node that you think is closest to a goal state.</p><h2 id="A">A*</h2><h3 id="Admissible-Heuristics">Admissible Heuristics</h3><p>A heuristic h is admissible (optimistic) if:</p><p>$$<br>0\leq h(n)\leq h^*(n)<br>$$</p><p>where $h^*(n)$ is the true cost to a nearest goal.</p><h3 id="Consistency">Consistency</h3><div class="group-image-container"><div class="group-image-row"><div class="group-image-wrap"><img src="" alt=""></div><div class="group-image-wrap"><img src="/img/CS181/consistency.png" alt=""></div><div class="group-image-wrap"><img src="" alt=""></div></div></div><div class="note note-success">            <p>Consistency implies admissibility</p>          </div><p>$$<br>\text{cost}(A \rightarrow C) + h( C) \geq h(A)<br>$$</p><h2 id="2-CSP-Constraint-satisfaction-problems">2. CSP(Constraint satisfaction problems)</h2><ul><li>Backtracking</li><li>Backtracking with Forward Checking</li><li>Ordering<ul><li>Least Constraining Value(LCV)<blockquote><ul><li>Given a choice of variable, choose the least constraining value</li><li>I.e., the one that rules out the fewest values in the remaining variables</li><li>Note that it may take some computation to determine this!  (E.g., rerunning filtering)</li></ul></blockquote></li><li>Minimum remaining values (MRV)<blockquote><ul><li>Choose the variable with the fewest legal left values in its domain</li><li>Also called “most constrained variable”</li></ul></blockquote></li></ul></li></ul><p><b><span class="label label-primary">Arc Consistency</span></b><br>After enforcing arc consistency:</p><ul><li>Can have one solution left</li><li>Can have multiple solutions left</li><li>Can have no solutions left (and not know it)</li></ul><h2 id="3-Adversarial-Search-Minimax">3. Adversarial Search(Minimax)</h2><ul><li>Time: $O(B^m)$</li><li>Space: $O(bm)$</li></ul><blockquote><p>Exactly the same as DFS.<br>And $m$ represents the depth of the node tree.</p></blockquote><p><b><span class="label label-primary">Depth-limited search</span></b></p><ul><li>Resources limits</li></ul><p>Replace terminal utilities with an evaluation function for non-terminal positions.</p><p>Evaluation Functions:<br><img src="/img/CS181/eva-func.png" alt=""></p><ul><li>Do not guarantee the optimal play.</li><li>More depth makes a BIG difference.</li></ul><h3 id="b-swig￼6-b-alpha-beta-Implementation"><b><span class="label label-primary">Adversarial Search</span></b>  $\alpha$-$\beta$ Implementation</h3><p><img src="/img/CS181/alpha-beta.png" alt="Pseudocode"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>课程学习</category>
+      
+      <category>CS181</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Learning</tag>
+      
+      <tag>CS181</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>CA Midterm_2 Review</title>
     <link href="/2024/04/22/CA-Midterm-2-Review/"/>
     <url>/2024/04/22/CA-Midterm-2-Review/</url>
